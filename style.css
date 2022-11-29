@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); /*Rajdhani,SemiBold600*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&display=swap'); /*Barlow',Light300+semiBold600*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); /*Rajdhani,SemiBold600*/
+.gradient-button {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  height: 100px;
+  width: 300px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  margin-left: 40%;
+  margin-top: 15%;
+}
+
+button::before {
+  content: '';
+  background: linear-gradient(to right, #ff7777, #d98eff, #77deff);
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  z-index: -1;
+  transition: left 500ms;
+}
+button:hover::before {
+  left: -100%;
+}
